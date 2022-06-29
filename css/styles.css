@@ -663,8 +663,13 @@ background-image: url(../images/clock\ \(1\).svg);
     background-color: var(--white-color);
 }
 .button-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30px;
     height: 30px;
+    margin: 0;
+    padding: 0;
     
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
