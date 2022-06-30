@@ -128,18 +128,25 @@ padding-bottom: 32px;
 }
 .nav-portfolio,
 .nav-studio {
+    position: relative;
     color: var(--accent-color);
 }
-
-
-
-
-.nav-studio {
-    color: var(--accent-color);
+.nav-studio::after,
+.nav-portfolio::after {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    content: '';    
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
 }
 
 .nav-studio:hover,
-.nav-studio:focus {
+.nav-studio:focus,
+.nav-portfolio:hover,
+.nav-portfolio:focus {
     color: var(--nav-color);
 }
 
@@ -639,6 +646,51 @@ background-image: url(../images/clock\ \(1\).svg);
     line-height: 1.88;
     color: var(--second-color);
 }
+
+.thumb-card {
+    position: relative;
+}
+.case:hover .case-text {
+    opacity: 0.9;
+}
+.case-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 370px;
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    opacity: 0;
+    transition: 250ms opacity var(--timing);
+}
+/*
+.direction-item {
+    position: relative;
+}
+
+.picture-text {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: inherit;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-color);
+    text-align: center;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: rgba(47, 48, 58, 0.8);
+}*/
 
 /*Модальное окно*/
 .backdrop {
